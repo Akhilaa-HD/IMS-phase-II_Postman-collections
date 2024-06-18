@@ -1,0 +1,1194 @@
+{
+	"info": {
+		"_postman_id": "2c8e8da4-5af6-4cdd-a0ba-8d4eed963465",
+		"name": "aerpace api list",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "28078636",
+		"_collection_link": "https://warped-water-744824.postman.co/workspace/aerpace~31296368-ecd6-4fff-8da0-4217413602e6/collection/28078636-2c8e8da4-5af6-4cdd-a0ba-8d4eed963465?action=share&source=collection_link&creator=28078636"
+	},
+	"item": [
+		{
+			"name": "devices",
+			"item": [
+				{
+					"name": "list device type",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidV8xMzIiLCJ1c2VyX3R5cGUiOiJVU0VSIiwicm9sZV9uYW1lIjoiU3VwZXIgQWRtaW4iLCJyb2xlX2lkIjoicl8zIiwidG9rZW5fdHlwZSI6IklEX1RPS0VOIiwiaWF0IjoxNzE4NTE2MDE1LCJleHAiOjE3MTg1MzA0MTV9.gWZnkvYRQmbBVDXQPud6YRugYBOdcNAuxR8pA8XyIr8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://ims-api-stg.aerpace.click/api/v1/devices/:device_type",
+							"protocol": "https",
+							"host": [
+								"ims-api-stg",
+								"aerpace",
+								"click"
+							],
+							"path": [
+								"api",
+								"v1",
+								"devices",
+								":device_type"
+							],
+							"variable": [
+								{
+									"key": "device_type",
+									"value": "DRONE"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get personality details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidV8xMzIiLCJ1c2VyX3R5cGUiOiJVU0VSIiwicm9sZV9uYW1lIjoiU3VwZXIgQWRtaW4iLCJyb2xlX2lkIjoicl8zIiwidG9rZW5fdHlwZSI6IklEX1RPS0VOIiwiaWF0IjoxNzE4NTE2MDE1LCJleHAiOjE3MTg1MzA0MTV9.gWZnkvYRQmbBVDXQPud6YRugYBOdcNAuxR8pA8XyIr8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://ims-api-stg.aerpace.click/api/v1/devices/personality?model_id=m_110&variant_id=va_123&version_id=ver_9",
+							"protocol": "https",
+							"host": [
+								"ims-api-stg",
+								"aerpace",
+								"click"
+							],
+							"path": [
+								"api",
+								"v1",
+								"devices",
+								"personality"
+							],
+							"query": [
+								{
+									"key": "model_id",
+									"value": "m_110"
+								},
+								{
+									"key": "variant_id",
+									"value": "va_123"
+								},
+								{
+									"key": "version_id",
+									"value": "ver_9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit devices",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidV8xMzIiLCJ1c2VyX3R5cGUiOiJVU0VSIiwicm9sZV9uYW1lIjoiU3VwZXIgQWRtaW4iLCJyb2xlX2lkIjoicl8zIiwidG9rZW5fdHlwZSI6IklEX1RPS0VOIiwiaWF0IjoxNzE4NTE2MDE1LCJleHAiOjE3MTg1MzA0MTV9.gWZnkvYRQmbBVDXQPud6YRugYBOdcNAuxR8pA8XyIr8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"appler testing version\",\n  \"type\": \"CAR\",\n  \"version_id\": \"ver_98\",\n  \"privileges\": [\n    {\n      \"category_id\": 28,\n      \"actions\": [\n        52,\n        51\n      ]\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://ims-api-stg.aerpace.click/api/v1/devices"
+					},
+					"response": []
+				},
+				{
+					"name": "add device",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidV8xMzIiLCJ1c2VyX3R5cGUiOiJVU0VSIiwicm9sZV9uYW1lIjoiU3VwZXIgQWRtaW4iLCJyb2xlX2lkIjoicl8zIiwidG9rZW5fdHlwZSI6IklEX1RPS0VOIiwiaWF0IjoxNzE4NTE2MDE1LCJleHAiOjE3MTg1MzA0MTV9.gWZnkvYRQmbBVDXQPud6YRugYBOdcNAuxR8pA8XyIr8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"apple speed version\",\n  \"type\": \"CAR\",\n  \"variant_id\": \"va_124\",\n  \"privileges\": [\n    {\n      \"category_id\": 27,\n      \"actions\": [\n        50,\n        49\n      ]\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://ims-api-stg.aerpace.click/api/v1/devices/device-level"
+					},
+					"response": []
+				},
+				{
+					"name": "get hierarchy",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidV8xMzIiLCJ1c2VyX3R5cGUiOiJVU0VSIiwicm9sZV9uYW1lIjoiU3VwZXIgQWRtaW4iLCJyb2xlX2lkIjoicl8zIiwidG9rZW5fdHlwZSI6IklEX1RPS0VOIiwiaWF0IjoxNzE4NjA4MTc0LCJleHAiOjE3MTg2MjI1NzR9.2aXuIo12sY2lmg0NTJ2Ulv7dk0j_qIVJ0bN1Hs5QjEA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://ims-api-stg.aerpace.click/api/v1/devices/device-level/:id",
+							"protocol": "https",
+							"host": [
+								"ims-api-stg",
+								"aerpace",
+								"click"
+							],
+							"path": [
+								"api",
+								"v1",
+								"devices",
+								"device-level",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "m_1132"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "device execute",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidV80IiwidXNlcl90eXBlIjoiVVNFUiIsInJvbGVfbmFtZSI6IlN1cGVyIEFkbWluIiwicm9sZV9pZCI6InJfMyIsInRva2VuX3R5cGUiOiJJRF9UT0tFTiIsImlhdCI6MTcxNTIzNzk0OCwiZXhwIjoxNzE1MjUyMzQ4fQ.MxDSSzYw9ctDCqSglvd5PFfSR8Ff21MC53CAPoKgP9w",
+								"type": "text"
+							}
+						],
+						"url": "https://ims-api-stg.aerpace.click/api/v1/devices/execute"
+					},
+					"response": []
+				},
+				{
+					"name": "get privileges",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidV8xMzIiLCJ1c2VyX3R5cGUiOiJVU0VSIiwicm9sZV9uYW1lIjoiU3VwZXIgQWRtaW4iLCJyb2xlX2lkIjoicl8zIiwidG9rZW5fdHlwZSI6IklEX1RPS0VOIiwiaWF0IjoxNzE4NjA4MTc0LCJleHAiOjE3MTg2MjI1NzR9.2aXuIo12sY2lmg0NTJ2Ulv7dk0j_qIVJ0bN1Hs5QjEA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://ims-api-stg.aerpace.click/api/v1/privileges?type=CAR",
+							"protocol": "https",
+							"host": [
+								"ims-api-stg",
+								"aerpace",
+								"click"
+							],
+							"path": [
+								"api",
+								"v1",
+								"privileges"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "CAR"
+								},
+								{
+									"key": "id",
+									"value": "va_125",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get device privileges",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidV8xMzIiLCJ1c2VyX3R5cGUiOiJVU0VSIiwicm9sZV9uYW1lIjoiU3VwZXIgQWRtaW4iLCJyb2xlX2lkIjoicl8zIiwidG9rZW5fdHlwZSI6IklEX1RPS0VOIiwiaWF0IjoxNzE4NTE2MDE1LCJleHAiOjE3MTg1MzA0MTV9.gWZnkvYRQmbBVDXQPud6YRugYBOdcNAuxR8pA8XyIr8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://ims-api-stg.aerpace.click/api/v1//privileges/devices/:id",
+							"protocol": "https",
+							"host": [
+								"ims-api-stg",
+								"aerpace",
+								"click"
+							],
+							"path": [
+								"api",
+								"v1",
+								"",
+								"privileges",
+								"devices",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "m_113"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add privileges",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidV8xMzIiLCJ1c2VyX3R5cGUiOiJVU0VSIiwicm9sZV9uYW1lIjoiU3VwZXIgQWRtaW4iLCJyb2xlX2lkIjoicl8zIiwidG9rZW5fdHlwZSI6IklEX1RPS0VOIiwiaWF0IjoxNzE4NTE2MDE1LCJleHAiOjE3MTg1MzA0MTV9.gWZnkvYRQmbBVDXQPud6YRugYBOdcNAuxR8pA8XyIr8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"type\": \"CAR\",\n  \"model_id\": \"m_113\",\n  \"variant_id\": \"va_125\",\n  \"version_id\": \"ver_97\",\n  \"privileges\": [\n    {\n      \"personality\": \"OWNER\",\n      \"actions\": [\n        47,\n        48\n      ]\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://ims-api-stg.aerpace.click/api/v1/privileges/personality"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"raju@tilicho.in\",\n    \"password\": \"Raju@123\",\n    \"app\": \"ADMIN_PORTAL\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://ims-api-stg.aerpace.click/api/v1/auth/login"
+					},
+					"response": []
+				},
+				{
+					"name": "forgot password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"raju@tilicho.in\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://ims-api-stg.aerpace.click/api/v1/auth/forgot-password"
+					},
+					"response": []
+				},
+				{
+					"name": "login v2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"raju@tilicho.in\",\n    \"password\": \"Raju@321\",\n    \"app\": \"ADMIN_PORTAL\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://ims-api-stg.aerpace.click/api/v2/auth/login"
+					},
+					"response": []
+				},
+				{
+					"name": "reset-token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"new_password\": \"Raju@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ims-api-stg.aerpace.click/api/v1/auth/reset-password/:uuid",
+							"protocol": "https",
+							"host": [
+								"ims-api-stg",
+								"aerpace",
+								"click"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"reset-password",
+								":uuid"
+							],
+							"variable": [
+								{
+									"key": "uuid",
+									"value": "e4b3e8ef-8e02-440f-9e0a-7c71c379fcd4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change temporaray password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidV8xMzIiLCJ1c2VyX3R5cGUiOiJVU0VSIiwicm9sZV9uYW1lIjoiU3VwZXIgQWRtaW4iLCJyb2xlX2lkIjoicl8zIiwidG9rZW5fdHlwZSI6IklEX1RPS0VOIiwiaWF0IjoxNzE4NTE1MDY4LCJleHAiOjE3MTg1Mjk0Njh9.iPwe-ldBUdiC0xmn5qFFQy3ymB4y7WB-MdRkRjyjO3s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"new_password\": \"Raju@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://ims-api-stg.aerpace.click/api/v1/auth/temporary-password-reset"
+					},
+					"response": []
+				},
+				{
+					"name": "refresh token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InVfMSIsImlhdCI6MTY5MzEzODk1NywiZXhwIjoxNjk0MDAyOTU3fQ.3sgNamNXhBM36Jsnzcai0Jene262DOZWrdgy-yTjy5M\"",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"refresh_token\" : \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidV8xMzIiLCJ0b2tlbl90eXBlIjoiUkVGUkVTSF9UT0tFTiIsImlhdCI6MTcxODUxNjAxNSwiZXhwIjoxNzIxMTA4MDE1fQ.yU3878bj-8a6kl-UukOpt1so83bl6I2MGp9mNyLwAZg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://ims-api-stg.aerpace.click/api/v1/auth/refresh"
+					},
+					"response": []
+				},
+				{
+					"name": "MFA_R",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\":\"5081e55c-e00c-4b5a-9533-5cb87087f50c\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://ims-api-stg.aerpace.click/api/v1/auth/mfa/register"
+					},
+					"response": []
+				},
+				{
+					"name": "MFA_V",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidV8xIiwidXNlcl90eXBlIjoiVVNFUiIsInJvbGVfbmFtZSI6ImxlYWQiLCJyb2xlX2lkIjoicl8xMSIsInRva2VuX3R5cGUiOiJJRF9UT0tFTiIsImlhdCI6MTcxMjEzOTYyOSwiZXhwIjoxNzEyMTU0MDI5fQ.kfSoeO6KiLoN9GyPLSiPB4Rq5vXTC6kgtZwYXFvowxA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\":\"5081e55c-e00c-4b5a-9533-5cb87087f50c\",\n    \"otp\": \"852152\",\n    \"app\": \"ADMIN_PORTAL\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://ims-api-stg.aerpace.click/api/v1/auth/mfa/verify-totp"
+					},
+					"response": []
+				},
+				{
+					"name": "verify recovery code",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"code\": \"y5ek5-9avg0\",\n\"token\":\"5081e55c-e00c-4b5a-9533-5cb87087f50c\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://ims-api-stg.aerpace.click/api/v1/auth/mfa/verify"
+					},
+					"response": []
+				},
+				{
+					"name": "mfa_recovery",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidV8xMzIiLCJ1c2VyX3R5cGUiOiJVU0VSIiwicm9sZV9uYW1lIjoiU3VwZXIgQWRtaW4iLCJyb2xlX2lkIjoicl8zIiwidG9rZW5fdHlwZSI6IklEX1RPS0VOIiwiaWF0IjoxNzE4NTE2MDMxLCJleHAiOjE3MTg1MzA0MzF9.Ule5hG7xPn43jeu5mte3iLSRKozRvH-D2AI9LGq73tw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://ims-api-stg.aerpace.click/api/v1/auth/mfa/recovery"
+					},
+					"response": []
+				},
+				{
+					"name": "mfa_recovery POST",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidV8xMzIiLCJ1c2VyX3R5cGUiOiJVU0VSIiwicm9sZV9uYW1lIjoiU3VwZXIgQWRtaW4iLCJyb2xlX2lkIjoicl8zIiwidG9rZW5fdHlwZSI6IklEX1RPS0VOIiwiaWF0IjoxNzE4NTE2MDMxLCJleHAiOjE3MTg1MzA0MzF9.Ule5hG7xPn43jeu5mte3iLSRKozRvH-D2AI9LGq73tw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"code\": \"y5ek5-9avg0\",\n\"token\":\"5081e55c-e00c-4b5a-9533-5cb87087f50c\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://ims-api-stg.aerpace.click/api/v1/auth/mfa/recovery"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "distribution",
+			"item": [
+				{
+					"name": "get distributions",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidV8yIiwidXNlcl90eXBlIjoiVVNFUiIsInJvbGVfbmFtZSI6IlN1cGVyIEFkbWluIiwicm9sZV9pZCI6InJfMSIsInRva2VuX3R5cGUiOiJJRF9UT0tFTiIsImlhdCI6MTcxODYxMzIxNywiZXhwIjoxNzE4NjI3NjE3fQ.idsnGdo6r9w3_QcZHmdu3tcnSv_pTNtLx6ngit4H3Rk",
+								"type": "text"
+							}
+						],
+						"url": "https://ims-api-stg.aerpace.click/api/v1/distribution"
+					},
+					"response": []
+				},
+				{
+					"name": "add distributions",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidV8xMzIiLCJ1c2VyX3R5cGUiOiJVU0VSIiwicm9sZV9uYW1lIjoiU3VwZXIgQWRtaW4iLCJyb2xlX2lkIjoicl8zIiwidG9rZW5fdHlwZSI6IklEX1RPS0VOIiwiaWF0IjoxNzE4NTE2MDE1LCJleHAiOjE3MTg1MzA0MTV9.gWZnkvYRQmbBVDXQPud6YRugYBOdcNAuxR8pA8XyIr8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"mohan\",\n  \"email\": \"2fdsfds@tilicho.in\",\n  \"region\": \"andhra pradesh\",\n  \"phone_number\": \"9874932839\",\n  \"address\": \"los hydds\",\n  \"country_code\": \"+91\",\n  \"gst\": \"22qlaps9935b1z1\",\n  \"pan\": \"qlaps9935b\",\n  \"pin_code\": \"530022\",\n  \"distributor\": {\n    \"first_name\": \"aditya\",\n    \"last_name\": \"chandra\",\n    \"address\": \"Dno: 123 , mdp\",\n    \"email\": \"mo21123@tilicho.in\",\n    \"country_code\": \"+91\",\n    \"phone_number\": \"9109109100\",\n    \"secondary_country_code\": \"+91\",\n    \"secondary_number\": \"9090909090\",\n    \"remarks\": \"sadasdas\"\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://ims-api-stg.aerpace.click/api/v1/distribution"
+					},
+					"response": []
+				},
+				{
+					"name": "list single distribution",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidV8xMzIiLCJ1c2VyX3R5cGUiOiJVU0VSIiwicm9sZV9uYW1lIjoiU3VwZXIgQWRtaW4iLCJyb2xlX2lkIjoicl8zIiwidG9rZW5fdHlwZSI6IklEX1RPS0VOIiwiaWF0IjoxNzE4NTE2MDE1LCJleHAiOjE3MTg1MzA0MTV9.gWZnkvYRQmbBVDXQPud6YRugYBOdcNAuxR8pA8XyIr8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://ims-api-stg.aerpace.click/api/v1/distribution/:id",
+							"protocol": "https",
+							"host": [
+								"ims-api-stg",
+								"aerpace",
+								"click"
+							],
+							"path": [
+								"api",
+								"v1",
+								"distribution",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "dr_88"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "assign distribution",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidV8xMzIiLCJ1c2VyX3R5cGUiOiJVU0VSIiwicm9sZV9uYW1lIjoiU3VwZXIgQWRtaW4iLCJyb2xlX2lkIjoicl8zIiwidG9rZW5fdHlwZSI6IklEX1RPS0VOIiwiaWF0IjoxNzE4NTE2MDE1LCJleHAiOjE3MTg1MzA0MTV9.gWZnkvYRQmbBVDXQPud6YRugYBOdcNAuxR8pA8XyIr8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"distribution_id\": \"dr_88\",\n  \"devices\": [\n    \"00-b0-d0-65-c2-13\"\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://ims-api-stg.aerpace.click/api/v1/distribution/assign"
+					},
+					"response": []
+				},
+				{
+					"name": "unassign distribution",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidV8xMzIiLCJ1c2VyX3R5cGUiOiJVU0VSIiwicm9sZV9uYW1lIjoiU3VwZXIgQWRtaW4iLCJyb2xlX2lkIjoicl8zIiwidG9rZW5fdHlwZSI6IklEX1RPS0VOIiwiaWF0IjoxNzE4NTE2MDE1LCJleHAiOjE3MTg1MzA0MTV9.gWZnkvYRQmbBVDXQPud6YRugYBOdcNAuxR8pA8XyIr8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"distribution_id\": \"dr_88\",\n  \"devices\": [\n    \"00-b0-d0-65-c2-14\"\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://ims-api-stg.aerpace.click/api/v1/distribution/unassign"
+					},
+					"response": []
+				},
+				{
+					"name": "edit distribution",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidV8xMzIiLCJ1c2VyX3R5cGUiOiJVU0VSIiwicm9sZV9uYW1lIjoiU3VwZXIgQWRtaW4iLCJyb2xlX2lkIjoicl8zIiwidG9rZW5fdHlwZSI6IklEX1RPS0VOIiwiaWF0IjoxNzE4NTE2MDE1LCJleHAiOjE3MTg1MzA0MTV9.gWZnkvYRQmbBVDXQPud6YRugYBOdcNAuxR8pA8XyIr8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"mohan\",\n  \"phone_number\": \"9874932839\",\n  \"address\": \"los santos\",\n  \"country_code\": \"+91\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ims-api-stg.aerpace.click/api/v1/distribution/:id",
+							"protocol": "https",
+							"host": [
+								"ims-api-stg",
+								"aerpace",
+								"click"
+							],
+							"path": [
+								"api",
+								"v1",
+								"distribution",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "dr_88"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "inventory",
+			"item": [
+				{
+					"name": "upload csv",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidV8xMzIiLCJ1c2VyX3R5cGUiOiJVU0VSIiwicm9sZV9uYW1lIjoiU3VwZXIgQWRtaW4iLCJyb2xlX2lkIjoicl8zIiwidG9rZW5fdHlwZSI6IklEX1RPS0VOIiwiaWF0IjoxNzE4NTE2MDE1LCJleHAiOjE3MTg1MzA0MTV9.gWZnkvYRQmbBVDXQPud6YRugYBOdcNAuxR8pA8XyIr8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "csv_file",
+									"type": "file",
+									"src": "/home/raju/Downloads/response-2024-06-16-06-38-42-input-2024-05-06-08-25-48-successInput.csv"
+								}
+							]
+						},
+						"url": "https://ims-api-stg.aerpace.click/api/v1/inventory/csv"
+					},
+					"response": []
+				},
+				{
+					"name": "get inventory history",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidV8xMzIiLCJ1c2VyX3R5cGUiOiJVU0VSIiwicm9sZV9uYW1lIjoiU3VwZXIgQWRtaW4iLCJyb2xlX2lkIjoicl8zIiwidG9rZW5fdHlwZSI6IklEX1RPS0VOIiwiaWF0IjoxNzE4NTE2MDE1LCJleHAiOjE3MTg1MzA0MTV9.gWZnkvYRQmbBVDXQPud6YRugYBOdcNAuxR8pA8XyIr8",
+								"type": "text"
+							}
+						],
+						"url": "https://ims-api-stg.aerpace.click/api/v1/inventory/csv-history"
+					},
+					"response": []
+				},
+				{
+					"name": "get inventory",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidV8xMzIiLCJ1c2VyX3R5cGUiOiJVU0VSIiwicm9sZV9uYW1lIjoiU3VwZXIgQWRtaW4iLCJyb2xlX2lkIjoicl8zIiwidG9rZW5fdHlwZSI6IklEX1RPS0VOIiwiaWF0IjoxNzE4NTUxMDA3LCJleHAiOjE3MTg1NjU0MDd9.UJ6qWNRG0Au_Yp8Ku9QdpqxEnEBcwMSY-4I8KpTnMIc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://ims-api-stg.aerpace.click/api/v1/inventory/?page_limit=4&distribution=MohaN",
+							"protocol": "https",
+							"host": [
+								"ims-api-stg",
+								"aerpace",
+								"click"
+							],
+							"path": [
+								"api",
+								"v1",
+								"inventory",
+								""
+							],
+							"query": [
+								{
+									"key": "page_limit",
+									"value": "4"
+								},
+								{
+									"key": "color",
+									"value": "black",
+									"disabled": true
+								},
+								{
+									"key": "distribution",
+									"value": "MohaN"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "csv export",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidV8xMzIiLCJ1c2VyX3R5cGUiOiJVU0VSIiwicm9sZV9uYW1lIjoiU3VwZXIgQWRtaW4iLCJyb2xlX2lkIjoicl8zIiwidG9rZW5fdHlwZSI6IklEX1RPS0VOIiwiaWF0IjoxNzE4NTE2MDE1LCJleHAiOjE3MTg1MzA0MTV9.gWZnkvYRQmbBVDXQPud6YRugYBOdcNAuxR8pA8XyIr8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://ims-api-stg.aerpace.click/api/v1/inventory/csv-export?page_limit=2",
+							"protocol": "https",
+							"host": [
+								"ims-api-stg",
+								"aerpace",
+								"click"
+							],
+							"path": [
+								"api",
+								"v1",
+								"inventory",
+								"csv-export"
+							],
+							"query": [
+								{
+									"key": "page_limit",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "get users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidV8xMzIiLCJ1c2VyX3R5cGUiOiJVU0VSIiwicm9sZV9uYW1lIjoiU3VwZXIgQWRtaW4iLCJyb2xlX2lkIjoicl8zIiwidG9rZW5fdHlwZSI6IklEX1RPS0VOIiwiaWF0IjoxNzE4NTIzNDk3LCJleHAiOjE3MTg1Mzc4OTd9.OnYX5usNzi5YJN7EaeH9PTY-BNU_IP4_-flKOg0yFwk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://ims-api-stg.aerpace.click/api/v1/users?role=User Manager",
+							"protocol": "https",
+							"host": [
+								"ims-api-stg",
+								"aerpace",
+								"click"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users"
+							],
+							"query": [
+								{
+									"key": "role",
+									"value": "User Manager"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add users",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidV8xMzIiLCJ1c2VyX3R5cGUiOiJVU0VSIiwicm9sZV9uYW1lIjoiU3VwZXIgQWRtaW4iLCJyb2xlX2lkIjoicl8zIiwidG9rZW5fdHlwZSI6IklEX1RPS0VOIiwiaWF0IjoxNzE4NTUwMjI4LCJleHAiOjE3MTg1NjQ2Mjh9.dfgcbQYUpsDIcIk85BsGmf0H7wZyqfVpCkXtWoVwSu0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"role_id\": \"r_51\",\n  \"first_name\": \"praddep\",\n  \"last_name\": \"chandra\",\n  \"email\": \"pawswsdssswa+9@tilicho.in\",\n  \"country_code\": \"+91\",\n  \"phone_number\": \"1231231232\",\n  \"address\": \"fdfdsaffffffffffffffffffffffffffffffffdfdijngdjnnndskjfndsnfsdnfsdfnsdnfksdnfndjngdjnnndskjfndsnfsdnfsdfnsdnfksdnfndjngdjnnndskjfndsnfsdnfsdfnsdnfksdnfndsfndsnfsdnfdfnsdnfsdjnfkdsnfsdnjfnsdfnsnfksdnfksdjfsdfsdfdfdsssssssssssssssfffffffffffvizag\",\n  \"pin_code\": \"530022\",\n  \"state\": \"andhrA pradESh\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://ims-api-stg.aerpace.click/api/v1/users"
+					},
+					"response": []
+				},
+				{
+					"name": "edit user",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidV8xMzIiLCJ1c2VyX3R5cGUiOiJVU0VSIiwicm9sZV9uYW1lIjoiU3VwZXIgQWRtaW4iLCJyb2xlX2lkIjoicl8zIiwidG9rZW5fdHlwZSI6IklEX1RPS0VOIiwiaWF0IjoxNzE4NTUwMjI4LCJleHAiOjE3MTg1NjQ2Mjh9.dfgcbQYUpsDIcIk85BsGmf0H7wZyqfVpCkXtWoVwSu0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"role_id\": \"r_56\",\n  \"phone_number\": \"9089090090\",\n  \"country_code\": \"+91\",\n  \"address\": \"vizag\",\n  \"pin_code\": \"530022\",\n  \"state\": \"andhra pRAdesh\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ims-api-stg.aerpace.click/api/v1/users/:id",
+							"protocol": "https",
+							"host": [
+								"ims-api-stg",
+								"aerpace",
+								"click"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "u_215"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user config",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidV8xMzIiLCJ1c2VyX3R5cGUiOiJVU0VSIiwicm9sZV9uYW1lIjoiU3VwZXIgQWRtaW4iLCJyb2xlX2lkIjoicl8zIiwidG9rZW5fdHlwZSI6IklEX1RPS0VOIiwiaWF0IjoxNzE4NTIzNDk3LCJleHAiOjE3MTg1Mzc4OTd9.OnYX5usNzi5YJN7EaeH9PTY-BNU_IP4_-flKOg0yFwk",
+								"type": "text"
+							}
+						],
+						"url": "https://ims-api-stg.aerpace.click/api/v1/users/config"
+					},
+					"response": []
+				},
+				{
+					"name": "upload profile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidV8xMzIiLCJ1c2VyX3R5cGUiOiJVU0VSIiwicm9sZV9uYW1lIjoiU3VwZXIgQWRtaW4iLCJyb2xlX2lkIjoicl8zIiwidG9rZW5fdHlwZSI6IklEX1RPS0VOIiwiaWF0IjoxNzE4NTIzNDk3LCJleHAiOjE3MTg1Mzc4OTd9.OnYX5usNzi5YJN7EaeH9PTY-BNU_IP4_-flKOg0yFwk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "file",
+							"file": {
+								"src": "/home/raju/Downloads/download.jpeg"
+							}
+						},
+						"url": "https://ims-api-stg.aerpace.click/api/v1/users/profile-picture"
+					},
+					"response": []
+				},
+				{
+					"name": "pre-s",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "file",
+							"file": {
+								"src": "/home/raju/Downloads/download.jpeg"
+							}
+						},
+						"url": {
+							"raw": "https://aergov-profiles.s3.ap-south-1.amazonaws.com/aergov-dev-profiles/u_132.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA5JYCFD5UZHWTTDVQ%2F20240616%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20240616T075119Z&X-Amz-Expires=900&X-Amz-Signature=d4935205e147d5957b2906d30e6d1b1c063ced30ec978e32fb2fed7c899efac8&X-Amz-SignedHeaders=host",
+							"protocol": "https",
+							"host": [
+								"aergov-profiles",
+								"s3",
+								"ap-south-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"aergov-dev-profiles",
+								"u_132.jpeg"
+							],
+							"query": [
+								{
+									"key": "X-Amz-Algorithm",
+									"value": "AWS4-HMAC-SHA256"
+								},
+								{
+									"key": "X-Amz-Credential",
+									"value": "AKIA5JYCFD5UZHWTTDVQ%2F20240616%2Fap-south-1%2Fs3%2Faws4_request"
+								},
+								{
+									"key": "X-Amz-Date",
+									"value": "20240616T075119Z"
+								},
+								{
+									"key": "X-Amz-Expires",
+									"value": "900"
+								},
+								{
+									"key": "X-Amz-Signature",
+									"value": "d4935205e147d5957b2906d30e6d1b1c063ced30ec978e32fb2fed7c899efac8"
+								},
+								{
+									"key": "X-Amz-SignedHeaders",
+									"value": "host"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "master permissions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://ims-api-stg.aerpace.click/api/v1//users/master-permissions"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "roles",
+			"item": [
+				{
+					"name": "get roles",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidV8xMzIiLCJ1c2VyX3R5cGUiOiJVU0VSIiwicm9sZV9uYW1lIjoiU3VwZXIgQWRtaW4iLCJyb2xlX2lkIjoicl8zIiwidG9rZW5fdHlwZSI6IklEX1RPS0VOIiwiaWF0IjoxNzE4NTIzNDk3LCJleHAiOjE3MTg1Mzc4OTd9.OnYX5usNzi5YJN7EaeH9PTY-BNU_IP4_-flKOg0yFwk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://ims-api-stg.aerpace.click/api/v1/roles?search=supe",
+							"protocol": "https",
+							"host": [
+								"ims-api-stg",
+								"aerpace",
+								"click"
+							],
+							"path": [
+								"api",
+								"v1",
+								"roles"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "supe"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add role",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidV8xMzIiLCJ1c2VyX3R5cGUiOiJVU0VSIiwicm9sZV9uYW1lIjoiU3VwZXIgQWRtaW4iLCJyb2xlX2lkIjoicl8zIiwidG9rZW5fdHlwZSI6IklEX1RPS0VOIiwiaWF0IjoxNzE4NTIzNDk3LCJleHAiOjE3MTg1Mzc4OTd9.OnYX5usNzi5YJN7EaeH9PTY-BNU_IP4_-flKOg0yFwk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"role_name\": \"user add \",\n  \"permissions\": [\n    \"USERS_MANAGEMENT#USERS_TAB#ADD_USER\"\n  ]\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://ims-api-stg.aerpace.click/api/v1/roles"
+					},
+					"response": []
+				},
+				{
+					"name": "delete role",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidV8xMzIiLCJ1c2VyX3R5cGUiOiJVU0VSIiwicm9sZV9uYW1lIjoiU3VwZXIgQWRtaW4iLCJyb2xlX2lkIjoicl8zIiwidG9rZW5fdHlwZSI6IklEX1RPS0VOIiwiaWF0IjoxNzE4NTIzNDk3LCJleHAiOjE3MTg1Mzc4OTd9.OnYX5usNzi5YJN7EaeH9PTY-BNU_IP4_-flKOg0yFwk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://ims-api-stg.aerpace.click/api/v1/roles/:id",
+							"protocol": "https",
+							"host": [
+								"ims-api-stg",
+								"aerpace",
+								"click"
+							],
+							"path": [
+								"api",
+								"v1",
+								"roles",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "r_66"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit role",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidV8xMzIiLCJ1c2VyX3R5cGUiOiJVU0VSIiwicm9sZV9uYW1lIjoiU3VwZXIgQWRtaW4iLCJyb2xlX2lkIjoicl8zIiwidG9rZW5fdHlwZSI6IklEX1RPS0VOIiwiaWF0IjoxNzE4NTIzNDk3LCJleHAiOjE3MTg1Mzc4OTd9.OnYX5usNzi5YJN7EaeH9PTY-BNU_IP4_-flKOg0yFwk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"role_name\": \"role 1 test\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ims-api-stg.aerpace.click/api/v1/roles/:id",
+							"protocol": "https",
+							"host": [
+								"ims-api-stg",
+								"aerpace",
+								"click"
+							],
+							"path": [
+								"api",
+								"v1",
+								"roles",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "r_66"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
